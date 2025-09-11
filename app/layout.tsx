@@ -12,14 +12,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className="min-h-screen flex flex-col font-sans text-[#1E1E2F] 
-                   bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800"
-      >
-        <main className="flex-grow flex flex-col justify-center items-center px-4">
-          {children}
-        </main>
+    <html lang="en" className="h-full">
+      <body className="h-full m-0 font-sans text-[#1E1E2F]">
+        {children}
       </body>
     </html>
   );

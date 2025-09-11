@@ -31,7 +31,7 @@ export default function ContactForm() {
           `Sent from: Excolutus Coming Soon Page\n` +
           `Time: ${new Date().toLocaleString()}`,
       )
-      const mailtoLink = `mailto:info@excolutus.com?subject=${subject}&body=${body}`
+      const mailtoLink = `mailto:jdavis@excolutus.com?subject=${subject}&body=${body}`
 
       window.location.href = mailtoLink
 
@@ -48,6 +48,10 @@ export default function ContactForm() {
       console.error("Error sending email:", error)
       setIsSubmitting(false)
     }
+  }
+
+  const handlePhoneCall = () => {
+    window.location.href = "tel:+15027628637"
   }
 
   const inputVariants = {
@@ -158,7 +162,7 @@ export default function ContactForm() {
           transition={{ delay: 1, duration: 0.5 }}
           className="mt-4 text-slate-400 text-sm relative z-10"
         >
-          Redirecting to hasanwork440@gmail.com
+          Redirecting to jdavis@excolutus.com
         </motion.div>
       </motion.div>
     )
@@ -166,6 +170,7 @@ export default function ContactForm() {
 
   return (
     <motion.div
+    
       initial="hidden"
       animate="visible"
       className="bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-slate-500/30 shadow-2xl max-w-md w-full relative overflow-hidden"
@@ -188,7 +193,7 @@ export default function ContactForm() {
         />
       </div>
 
-      <motion.div className="text-center mb-8 relative z-10">
+      <motion.div  className="text-center mb-8 relative z-10">
         <motion.h2
           className="text-3xl sm:text-4xl font-black mb-2 relative"
           whileHover={{ scale: 1.05 }}
@@ -210,6 +215,31 @@ export default function ContactForm() {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="h-1 bg-gradient-to-r from-slate-400 to-slate-500 mx-auto rounded-full"
         />
+
+        <motion.div
+          
+          className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <motion.a
+            href="mailto:jdavis@excolutus.com"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors duration-300"
+          >
+            <span className="text-lg">📧</span>
+            <span className="text-sm font-medium">jdavis@excolutus.com</span>
+          </motion.a>
+
+          <motion.button
+            onClick={handlePhoneCall}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors duration-300"
+          >
+            <span className="text-lg">📞</span>
+            <span className="text-sm font-medium">+1 502.762.8637</span>
+          </motion.button>
+        </motion.div>
       </motion.div>
 
       <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
