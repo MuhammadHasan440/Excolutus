@@ -138,19 +138,7 @@ export default function ComingSoon() {
               </h1>
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-base sm:text-lg md:text-xl text-white italic font-medium mb-4 tracking-wide relative"
-              style={{
-                textShadow: "2px 2px 8px rgba(0,0,0,0.8), 0 0 16px rgba(0,0,0,0.6)",
-              }}
-            >
-              <span className="bg-slate-900/60 px-3 py-1 rounded-lg backdrop-blur-sm">
-                Excolutus = Latin for Refine
-              </span>
-            </motion.p>
+            
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -158,7 +146,7 @@ export default function ComingSoon() {
               transition={{ duration: 0.8, delay: 0.7 }}
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-10 max-w-2xl leading-relaxed"
             >
-              <span className="bg-gradient-to-r from-slate-300 via-slate-200 to-slate-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-slate-300 via-slate-200 to-slate-400 bg-clip-text text-transparent ">
                 Refined Innovation in Technology
               </span>
             </motion.p>
